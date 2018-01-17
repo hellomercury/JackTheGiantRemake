@@ -23,15 +23,7 @@ public class GameManager : MonoBehaviour {
 
 	void OnLevelWasLoaded(){
 		if (SceneManager.GetActiveScene().name == "Gameplay") {
-			if (gameRestartedAfterPlayerDied) {
-				GameplayController.instance.SetScore (score);
-				GameplayController.instance.SetCoinScore (coinScore);
-				GameplayController.instance.SetLifeScore (lifeScore);
-
-				PlayerScore.scoreCount = score;
-				PlayerScore.coinCount = coinScore;
-				PlayerScore.lifeCount = lifeScore;
-			} else if(gameStartedFromMainMenu){
+			if(gameStartedFromMainMenu){
 				PlayerScore.scoreCount = 0;
 				PlayerScore.coinCount = 0;
 				PlayerScore.lifeCount = 2;
@@ -39,6 +31,14 @@ public class GameManager : MonoBehaviour {
 				GameplayController.instance.SetScore (0);
 				GameplayController.instance.SetCoinScore (0);
 				GameplayController.instance.SetLifeScore (2);
+			}else if (gameRestartedAfterPlayerDied) {
+				GameplayController.instance.SetScore (score);
+				GameplayController.instance.SetCoinScore (coinScore);
+				GameplayController.instance.SetLifeScore (lifeScore);
+
+				PlayerScore.scoreCount = score;
+				PlayerScore.coinCount = coinScore;
+				PlayerScore.lifeCount = lifeScore;
 			}
 
 		}
