@@ -2,4 +2,4 @@
 A game created with Unity written in C#.
 
 Main Menu
-![alt tag](/screenshot/menu.png | width=100)
+![](/screenshot/menu.png | width=100)
