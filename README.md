@@ -2,4 +2,4 @@
 A game created with Unity written in C#.
 
 Main Menu
-![](/screenshot/menu.png)
+![](https://github.com/xzhan140/JackTheGiantRemake/blob/master/screenshot/menu.png | width=100)
